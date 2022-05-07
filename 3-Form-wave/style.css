@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffc600;
+    color: #fff;
+    font-family: 'Macondo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: #ffc600;
+}
+
+.btn {
+    width: 100%;
+    background: darkmagenta;
+    padding: 15px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: #ffc600;
+    transform: translateY(-30px);
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s ease-in all;
+}
